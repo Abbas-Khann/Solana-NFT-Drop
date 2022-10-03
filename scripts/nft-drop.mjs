@@ -23,7 +23,7 @@ const address = await sdk.deployer.createNftDrop(contractMetadata);
 // Logging the address to the terminal console
 console.log("Contract Address: ", address);
 
-// Add the metadata of your NFTs
+/// Add the metadata of your NFTs
 const metadata = [
   {
     name: "NFT #1",
@@ -31,30 +31,30 @@ const metadata = [
     image: readFileSync("files/0.jpg"),
     properties: [
       {
-        name: "coolness",
-        value: "very cool!",
+        name: "kitten",
+        value: "very cute!",
       },
     ],
   },
   {
     name: "NFT #1",
-    description: "My first NFT!",
+    description: "My second NFT!",
     image: readFileSync("files/1.jpg"),
     properties: [
       {
-        name: "hotness",
-        value: "very hot!",
+        name: "grumpy cat",
+        value: "grumpy!",
       },
     ],
   },
   {
     name: "NFT #1",
-    description: "My first NFT!",
+    description: "My third NFT!",
     image: readFileSync("files/2.jpg"),
     properties: [
       {
-        name: "cat",
-        value: "cute!",
+        name: "Ninja Cat",
+        value: "warrior!",
       },
     ],
   },
@@ -62,7 +62,7 @@ const metadata = [
 
 const program = await sdk.getNFTDrop(address);
 
-//   And lazy mint NFTs to your program
+//   And lazy mint NFTs using the above metadata
 const tx = await program.lazyMint(metadata);
 // logging the transaction hash to the console
 console.log(tx);
