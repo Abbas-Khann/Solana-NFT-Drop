@@ -12,8 +12,6 @@ const contractMetadata = {
   name: "My NFT Drop",
   symbol: "MND",
   description: "This is my NFT Drop",
-  price: 0,
-  sellerFeeBasisPoints: 0,
   itemsAvailable: 5,
 };
 
